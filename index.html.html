@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konstantin Grishin | Landscape Designer & Dendrologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'forest': '#2C4C3B',
+                        'earth': '#8B7355',
+                        'stone': '#F4F4F4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom image hover effect */
+        .img-hover-zoom {
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.5s ease;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+        /* Modal for fullscreen images */
+        #img-modal {
+            display: none;
+            backdrop-filter: blur(5px);
+        }
+        #img-modal.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-stone text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 font-serif text-2xl font-semibold text-forest tracking-wider">
+                    KG.
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-forest transition-colors">About</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-forest transition-colors">Portfolio</a>
+                    <a href="#experience" class="text-gray-600 hover:text-forest transition-colors">Experience</a>
+                    <a href="#contact" class="px-5 py-2 bg-forest text-white rounded-full hover:bg-opacity-90 transition-all">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="lg:w-2/3 text-center lg:text-left">
+            <p class="text-earth font-medium tracking-wide uppercase text-sm mb-4">Landscape Designer & Dendrologist</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-forest leading-tight mb-6">
+                Shaping nature into <br/> <span class="italic">living architecture.</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                Hi, I'm Konstantin Grishin. I combine a deep biological understanding of plants with advanced 3D visualization to create sustainable, aesthetic, and functional landscapes.
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#portfolio" class="px-8 py-3 bg-forest text-white rounded-full font-medium hover:bg-opacity-90 transition-all shadow-lg text-center">View Projects</a>
+                <a href="#contact" class="px-8 py-3 bg-white border border-forest text-forest rounded-full font-medium hover:bg-gray-50 transition-all text-center">Get in Touch</a>
+            </div>
+        </div>
+        <!-- Profile Image Placeholder (Can be replaced with actual photo) -->
+        <div class="lg:w-1/3">
+            <div class="aspect-[4/5] rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-200 flex items-center justify-center">
+              <img src="profile.jpg" alt="Konstantin Grishin" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-12 bg-forest text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-sm sm:text-base font-medium opacity-80">
+                <span>ArchiCAD</span>
+                <span>•</span>
+                <span>Enscape & Twinmotion</span>
+                <span>•</span>
+                <span>3ds Max & Corona</span>
+                <span>•</span>
+                <span>Dendrology</span>
+                <span>•</span>
+                <span>Project Estimation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-serif text-forest mb-4">Selected Works</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">A showcase of recent landscape concepts, from cozy country estates to atmospheric lounge parks.</p>
+        </div>
+
+        <div class="space-y-32">
+            
+            <!-- Project 1: Дворцы -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="lg:w-1/3 lg:pr-8">
+                    <h3 class="text-2xl font-serif text-forest mb-3">Project "Dvortsy" </h3>
+                    <p class="text-gray-600 mb-4">A modern landscape approach featuring clean architectural lines juxtaposed with lush, voluminous planting. Focus on hydrangeas, structural fencing, and elegant hardscaping.</p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><strong>Role:</strong> Concept, 3D Visualization, Planting Selection</li>
+                        <li><strong>Software:</strong> ArchiCAD, Enscape</li>
+                    </ul>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-2 gap-4">
+                    <div class="col-span-2 img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-05-19-16-12-50.png')">
+                        <img src="Enscape_2026-05-19-16-12-50.png" alt="Dvortsy view 1" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-06-17-15-14-47.png')">
+                        <img src="Enscape_2026-06-17-15-14-47.png" alt="Dvortsy view 2" class="w-full h-[250px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-07-29-12-39-01.jpg')">
+                        <img src="Enscape_2026-07-29-12-39-01.png" alt="Dvortsy view 3" class="w-full h-[250px] object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Каравай -->
+            <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                <div class="lg:w-1/3 lg:pl-8">
+                    <h3 class="text-2xl font-serif text-forest mb-3">Project "Karavay" </h3>
+                    <p class="text-gray-600 mb-4">A cozy country estate that embraces naturalistic planting. The design integrates wooden structures with abundant hydrangeas and functional zoning, including a stylish firewood storage area.</p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><strong>Role:</strong> Master planning, Visualization</li>
+                        <li><strong>Software:</strong> ArchiCAD, Enscape</li>
+                    </ul>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-2 gap-4">
+                    <div class="col-span-2 img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-06-11-13-01-16.png')">
+                        <img src="Enscape_2026-06-11-13-01-16.png" alt="Karavay view 1" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-06-11-12-56-16.png')">
+                        <img src="Enscape_2026-06-11-12-56-16.png" alt="Karavay view 2" class="w-full h-[250px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-06-11-14-05-46.png')">
+                        <img src="Enscape_2026-06-11-14-05-46.png" alt="Karavay view 3" class="w-full h-[250px] object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Чехов парк -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="lg:w-1/3 lg:pr-8">
+                    <h3 class="text-2xl font-serif text-forest mb-3">Project "Chekhov Park" </h3>
+                    <p class="text-gray-600 mb-4">An atmospheric evening concept featuring a modern dark-toned pavilion and a sunken fire pit lounge. Inspired by Japanese gardens, utilizing shaped pines, stone paths, and meticulous architectural lighting.</p>
+                    <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <li><strong>Role:</strong> Concept development, Lighting design, 3D Rendering</li>
+                        <li><strong>Software:</strong> ArchiCAD, Enscape</li>
+                    </ul>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-2 gap-4">
+                    <div class="col-span-2 img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-08-21-19-12-18.png')">
+                        <img src="Enscape_2026-08-21-19-12-18.png" alt="Chekhov Park view 1" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-08-21-19-11-07.png')">
+                        <img src="Enscape_2026-08-21-19-11-07.png" alt="Chekhov Park view 2" class="w-full h-[250px] object-cover">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer shadow-md" onclick="openModal('Enscape_2026-08-21-19-15-43.png')">
+                        <img src="Enscape_2026-08-21-19-15-43.png" alt="Chekhov Park view 3" class="w-full h-[250px] object-cover">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="py-24 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif text-forest mb-12 text-center">Experience & Education</h2>
+            
+            <div class="space-y-12">
+                <!-- Job 1 -->
+                <div class="relative pl-8 border-l-2 border-forest">
+                    <div class="absolute w-4 h-4 bg-forest rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-xl font-medium text-gray-800">Landscape Designer</h3>
+                    <p class="text-earth font-medium mb-2">Agrofirm 2plants | May 2025 - Present</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                        <li>Development of landscape projects from concept to final visualization.</li>
+                        <li>Creation of exterior visualizations using Twinmotion and Enscape.</li>
+                        <li>Preparation of technical drawings in ArchiCAD (master plans, paving, planting plans).</li>
+                        <li>Plant selection based on biological characteristics (Dendrology).</li>
+                        <li>Client communication and project presentations.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8 border-l-2 border-gray-300">
+                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-xl font-medium text-gray-800">Assistant Landscape Designer</h3>
+                    <p class="text-earth font-medium mb-2">Agrofirm 2plants | June 2024 - April 2025</p>
+                    <p class="text-gray-600 text-sm">Assisted in creating photorealistic renders in 3ds Max/Corona, preparing base technical drawings, and participating in site visits and measurements.</p>
+                </div>
+
+                <!-- Education -->
+                <div class="relative pl-8 border-l-2 border-gray-300 mt-16">
+                    <div class="absolute w-4 h-4 bg-earth rounded-full -left-[9px] top-1"></div>
+                    <h3 class="text-xl font-medium text-gray-800">Bachelor of Horticulture</h3>
+                    <p class="text-earth font-medium mb-2">Russian State Agrarian University, Moscow | 2024</p>
+                    <p class="text-gray-600 text-sm mb-4">Faculty of Agricultural Technologies, Engineering, and Land Management. Specialization: Vegetable and Fruit Growing.</p>
+                    
+                    <h4 class="font-medium text-gray-800 mb-2 mt-6">Professional Development:</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><strong>2026:</strong> Current Issues in Landscaping (Kaluga IPK)</li>
+                        <li><strong>2025:</strong> Drainage Systems in Landscape Construction (Zelenaya Strela)</li>
+                        <li><strong>2024:</strong> Archicad for Landscape Designers (AMS³ Training Center)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-20 bg-forest text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif mb-6">Let's create something beautiful together.</h2>
+            <p class="text-gray-300 mb-10 max-w-lg mx-auto">Available for remote work, business trips, and full-time positions. Currently looking for opportunities in the U.S.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:grishinkonstantin1106@gmail.com" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    grishinkonstantin1106@gmail.com
+                </a>
+                <a href="tel:+79100874830" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    +7 (910) 087-48-30
+                </a>
+            </div>
+            
+            <p class="text-sm text-gray-400">© 2026 Konstantin Grishin. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="img-modal" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4 cursor-pointer" onclick="closeModal()">
+        <span class="absolute top-6 right-8 text-white text-4xl hover:text-gray-300">&times;</span>
+        <img id="modal-img" src="" alt="Fullscreen preview" class="max-w-full max-h-full rounded shadow-2xl object-contain">
+    </div>
+
+    <script>
+        // Simple modal logic for viewing images fullscreen
+        const modal = document.getElementById('img-modal');
+        const modalImg = document.getElementById('modal-img');
+
+        function openModal(imageSrc) {
+            modalImg.src = imageSrc;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // prevent scrolling
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // re-enable scrolling
+        }
+    </script>
+</body>
+</html>
